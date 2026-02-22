@@ -338,6 +338,10 @@ ul { list-style: none; }
    HERO
    ======================================== */
 .hero {
+  background-image: url(https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&h=1080&fit=crop);
+  background-size: cover;
+  background-position: center;
+
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -348,6 +352,15 @@ ul { list-style: none; }
                 radial-gradient(ellipse at 70% 30%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
                 var(--bg-primary);
 }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+
 
 .hero-canvas {
     position: absolute;
